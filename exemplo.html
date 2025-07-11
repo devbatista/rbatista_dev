@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo - Usando a configuração do Tailwind</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuração reutilizada -->
+  <script src="tailwind.config.js"></script>
+  
+  <!-- CSS com as variáveis -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+  <div class="max-w-4xl mx-auto p-8">
+    <!-- Usando as cores personalizadas da configuração -->
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Exemplo de Reutilização</h1>
+      </div>
+      <div class="card-content">
+        <p class="text-foreground mb-4">
+          Este arquivo está usando a mesma configuração do Tailwind CSS!
+        </p>
+        
+        <!-- Usando as cores customizadas -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-primary text-primary-foreground p-4 rounded">
+            Cor Primary
+          </div>
+          <div class="bg-secondary text-secondary-foreground p-4 rounded">
+            Cor Secondary
+          </div>
+          <div class="bg-accent text-accent-foreground p-4 rounded">
+            Cor Accent
+          </div>
+          <div class="bg-muted text-muted-foreground p-4 rounded">
+            Cor Muted
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

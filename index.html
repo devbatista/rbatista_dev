@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo Online - Rafael Batista - Dev Backend">
+  <title>Rafael Batista</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Configuração do Tailwind -->
+  <script src="tailwind.config.js"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+    <div class="max-w-6xl mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div
+          class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
+          RB
+        </div>
+        <div class="text-center md:text-left flex-1">
+          <h1 class="text-4xl font-bold text-gray-900 mb-2">Rafael Batista</h1>
+          <p class="text-xl text-gray-600 mb-4">Desenvolvedor Back-end</p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-1">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              rafael@devbatista.com
+            </div>
+            <div class="flex items-center gap-1">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              (11) 98681-9042
+            </div>
+            <div class="flex items-center gap-1">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              Osasco, SP
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <button class="btn btn-outline btn-sm" data-action="linkedin" data-tooltip="Ver perfil no LinkedIn">
+            <i data-lucide="linkedin" class="w-4 h-4 mr-2"></i>
+            LinkedIn
+          </button>
+          <button class="btn btn-outline btn-sm" data-action="github" data-tooltip="Ver repositórios no GitHub">
+            <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+            GitHub
+          </button>
+          <button class="btn btn-primary btn-sm" data-action="download-cv" data-tooltip="Baixar currículo em PDF">
+            <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+            Download CV
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Coluna Principal -->
+      <div class="lg:col-span-2 space-y-8">
+        <!-- Sobre Mim -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <div class="w-2 h-8 bg-blue-500 rounded-full"></div>
+              Sobre Mim
+            </h2>
+          </div>
+          <div class="card-content">
+            <p class="text-gray-700 leading-relaxed">
+              Sou desenvolvedor backend com 6 anos de experiência, especializado em sistemas financeiros e 
+              integrações de pagamento (PIX, cartão, boletos, assinaturas e comissionamento). Tenho domínio 
+              em Ruby on Rails e PHP, além de conhecimento em Go, APIs, performance, testes e mensageria com SQS 
+              e Sidekiq. Gosto de atuar de forma colaborativa, com foco no negócio, buscando soluções escaláveis
+              e de impacto, sempre prezando por comunicação clara, autonomia e aprendizado contínuo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experiência Profissional -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <div class="w-2 h-8 bg-green-500 rounded-full"></div>
+              Experiência Profissional
+            </h2>
+          </div>
+          <div class="card-content space-y-6">
+            <div class="timeline-item">
+              <div class="timeline-dot bg-green-500"></div>
+              <div class="timeline-content">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 class="font-semibold text-lg">Dev Ruby on Rails Pleno</h3>
+                  <div class="flex items-center gap-1 text-sm text-gray-500">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Dez/2021 - Mai/2025
+                  </div>
+                </div>
+                <div class="flex items-center gap-1 text-gray-600 mb-3">
+                  <i data-lucide="building" class="w-4 h-4"></i>
+                  iugu Instituição de Pagamento S/A
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Desenvolvimento e manutenção de sistemas de pagamento online.
+                  Integração com APIs de pagamento e gateways financeiros.
+                  Colaboração com times ágeis para entrega contínua e melhoria de processos.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge-secondary">Ruby on Rails</span>
+                  <span class="badge badge-secondary">MySQL</span>
+                  <span class="badge badge-secondary">Sidekiq</span>
+                  <span class="badge badge-secondary">AWS</span>
+                  <span class="badge badge-secondary">Elasticsearch</span>
+                  <span class="badge badge-secondary">Docker</span>
+                  <span class="badge badge-secondary">Redis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot bg-blue-500"></div>
+              <div class="timeline-content">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 class="font-semibold text-lg">Desenvolvedor Back-end PHP</h3>
+                  <div class="flex items-center gap-1 text-sm text-gray-500">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Jan/2021 - Nov/2021
+                  </div>
+                </div>
+                <div class="flex items-center gap-1 text-gray-600 mb-3">
+                  <i data-lucide="building" class="w-4 h-4"></i>
+                  BomValor
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Desenvolvimento de aplicações web responsivas e sistemas de e-commerce. Implementação de integrações
+                  com APIs de terceiros e otimização de performance.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge-secondary">Vue.js</span>
+                  <span class="badge badge-secondary">Python</span>
+                  <span class="badge badge-secondary">PostgreSQL</span>
+                  <span class="badge badge-secondary">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot bg-purple-500"></div>
+              <div class="timeline-content">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 class="font-semibold text-lg">Desenvolvedor Frontend</h3>
+                  <div class="flex items-center gap-1 text-sm text-gray-500">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    2019 - 2020
+                  </div>
+                </div>
+                <div class="flex items-center gap-1 text-gray-600 mb-3">
+                  <i data-lucide="building" class="w-4 h-4"></i>
+                  WebAgency Pro
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Criação de interfaces modernas e responsivas para diversos clientes. Foco em UX/UI e implementação
+                  de designs pixel-perfect.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge-secondary">JavaScript</span>
+                  <span class="badge badge-secondary">CSS3</span>
+                  <span class="badge badge-secondary">Bootstrap</span>
+                  <span class="badge badge-secondary">jQuery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projetos -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <div class="w-2 h-8 bg-purple-500 rounded-full"></div>
+              Projetos em Destaque
+            </h2>
+          </div>
+          <div class="card-content space-y-4">
+            <div class="project-card">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-lg">E-commerce Platform</h3>
+                <button class="btn btn-ghost btn-sm" data-action="project-link" data-project="E-commerce Platform">
+                  <i data-lucide="external-link" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de
+                estoque.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-outline">Next.js</span>
+                <span class="badge badge-outline">Stripe</span>
+                <span class="badge badge-outline">Prisma</span>
+                <span class="badge badge-outline">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-lg">Task Management App</h3>
+                <button class="btn btn-ghost btn-sm" data-action="project-link" data-project="Task Management App">
+                  <i data-lucide="external-link" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Aplicativo de gerenciamento de tarefas com colaboração em tempo real e integração com calendários.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-outline">React</span>
+                <span class="badge badge-outline">Socket.io</span>
+                <span class="badge badge-outline">MongoDB</span>
+                <span class="badge badge-outline">Express</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-lg">Weather Dashboard</h3>
+                <button class="btn btn-ghost btn-sm" data-action="project-link" data-project="Weather Dashboard">
+                  <i data-lucide="external-link" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Dashboard interativo de clima com previsões detalhadas, mapas e alertas personalizados.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-outline">Vue.js</span>
+                <span class="badge badge-outline">Chart.js</span>
+                <span class="badge badge-outline">OpenWeather API</span>
+                <span class="badge badge-outline">PWA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <!-- Habilidades -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <i data-lucide="code" class="w-5 h-5"></i>
+              Habilidades Técnicas
+            </h2>
+          </div>
+          <div class="card-content space-y-4">
+            <div>
+              <h4 class="font-medium mb-2">Frontend</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">Javascript</span>
+                <span class="badge">Vue.js</span>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div>
+              <h4 class="font-medium mb-2">Backend</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">Ruby on Rails</span>
+                <span class="badge">Laravel</span>
+                <span class="badge">Go</span>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div>
+              <h4 class="font-medium mb-2">Banco de Dados</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Redis</span>
+                <span class="badge">Oracle</span>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div>
+              <h4 class="font-medium mb-2">DevOps & Cloud</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">AWS</span>
+                <span class="badge">Kubernetes</span>
+                <span class="badge">CI/CD</span>
+                <span class="badge">CloudWatch</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2">Ferramentas</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">Git</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Linux</span>
+                <span class="badge">MacOS</span>
+                <span class="badge">Sidekiq</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Educação -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              Educação
+            </h2>
+          </div>
+          <div class="card-content space-y-4">
+            <div>
+              <h3 class="font-semibold">Técnico em Redes de computadores</h3>
+              <p class="text-sm text-gray-600">Senai</p>
+              <p class="text-sm text-gray-500">2015 - 2016</p>
+            </div>
+            <div class="separator"></div>
+            <div>
+              <h3 class="font-semibold">Certificação AWS Solutions Architect</h3>
+              <p class="text-sm text-gray-600">Amazon Web Services</p>
+              <p class="text-sm text-gray-500">2023</p>
+            </div>
+            <div class="separator"></div>
+            <div>
+              <h3 class="font-semibold">React Developer Certification</h3>
+              <p class="text-sm text-gray-600">Meta</p>
+              <p class="text-sm text-gray-500">2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Idiomas -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <i data-lucide="globe" class="w-5 h-5"></i>
+              Idiomas
+            </h2>
+          </div>
+          <div class="card-content space-y-3">
+            <div class="flex justify-between items-center">
+              <span>Português</span>
+              <span class="badge badge-secondary">Nativo</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span>Inglês</span>
+              <span class="badge badge-secondary">Avançado</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span>Espanhol</span>
+              <span class="badge badge-secondary">Intermediário</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contato -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Entre em Contato</h2>
+          </div>
+          <div class="card-content space-y-3">
+            <button class="btn btn-outline w-full" data-action="email">
+              <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+              Enviar Email
+            </button>
+            <button class="btn btn-outline w-full" data-action="phone">
+              <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+              Ligar
+            </button>
+            <button class="btn btn-primary w-full" data-action="linkedin">
+              <i data-lucide="linkedin" class="w-4 h-4 mr-2"></i>
+              LinkedIn
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-center text-gray-600">
+      <p>© 2024 Rafael Batista. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
