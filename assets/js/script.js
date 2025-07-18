@@ -39,9 +39,15 @@ function setupButtonHandlers() {
   const downloadBtn = document.querySelector('[data-action="download-cv"]');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', function () {
-      // Aqui você pode implementar o download do CV
-      console.log('Download CV clicked');
-      showToast('CV será baixado em breve!');
+      const link = document.createElement('a');
+      link.href = './assets/pdf/rafael-batista.pdf';
+      link.download = 'Rafael-Batista.pdf';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      showToast('CV baixado com sucesso!', 'success');
     });
   }
 
