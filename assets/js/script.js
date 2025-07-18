@@ -84,8 +84,17 @@ function setupButtonHandlers() {
   document.querySelectorAll('[data-action="project-link"]').forEach(btn => {
     btn.addEventListener('click', function () {
       const projectName = this.getAttribute('data-project');
-      console.log(`Abrir projeto: ${projectName}`);
-      showToast(`Abrindo projeto ${projectName}...`);
+      const projectUrl = this.getAttribute('data-url');
+
+      if (projectUrl) {
+        // Abrir link específico do projeto
+        window.open(projectUrl, '_blank');
+        showToast(`Abrindo projeto ${projectName}...`, 'success');
+      } else {
+        // Fallback para projetos sem URL
+        console.log(`Abrir projeto: ${projectName}`);
+        showToast(`Projeto ${projectName} em desenvolvimento...`, 'info');
+      }
     });
   });
 }
