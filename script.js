@@ -49,14 +49,14 @@ function setupButtonHandlers() {
   const emailBtn = document.querySelector('[data-action="email"]');
   if (emailBtn) {
     emailBtn.addEventListener('click', function () {
-      window.location.href = 'mailto:joao.silva@email.com';
+      window.location.href = 'mailto:rafael@devbatista.com';
     });
   }
 
   const phoneBtn = document.querySelector('[data-action="phone"]');
   if (phoneBtn) {
     phoneBtn.addEventListener('click', function () {
-      window.location.href = 'tel:+5511999999999';
+      window.location.href = 'tel:+5511991308008';
     });
   }
 
