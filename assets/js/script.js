@@ -62,7 +62,7 @@ function setupButtonHandlers() {
   const phoneBtn = document.querySelector('[data-action="phone"]');
   if (phoneBtn) {
     phoneBtn.addEventListener('click', function () {
-      window.location.href = 'tel:+5511991308008';
+      window.location.href = 'https://wa.me/5511986819042';
     });
   }
 
