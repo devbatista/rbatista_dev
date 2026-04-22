@@ -149,11 +149,15 @@
         </div>
         <div class="flex gap-3">
           <button class="btn btn-outline btn-sm" data-action="linkedin" data-tooltip="Ver perfil no LinkedIn">
-            <i data-lucide="linkedin" class="w-4 h-4 mr-2"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175A1.161 1.161 0 0 1 0 14.854zM4.943 13.5V6.169H2.542V13.5zM3.743 5.167c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248S2.4 3.21 2.4 3.92c0 .694.52 1.248 1.327 1.248zm9.757 8.333V9.359c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.752 0 7.331 0 7.331h2.4V9.405c0-.219.016-.438.08-.595.173-.438.567-.892 1.228-.892.867 0 1.214.673 1.214 1.658V13.5z"/>
+            </svg>
             LinkedIn
           </button>
           <button class="btn btn-outline btn-sm" data-action="github" data-tooltip="Ver repositórios no GitHub">
-            <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49C4 14.09 3.48 13.2 3.32 12.76c-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.66 7.66 0 0 1 8 4.98a7.7 7.7 0 0 1 2.01.27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
             GitHub
           </button>
           <button class="btn btn-primary btn-sm" data-action="download-cv" data-tooltip="Baixar currículo em PDF">
@@ -188,6 +192,51 @@
           </div>
         </div>
 
+        <!-- Perfil Profissional -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <div class="w-2 h-8 bg-indigo-500 rounded-full"></div>
+              Perfil Profissional
+            </h2>
+          </div>
+          <div class="card-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <h3 class="font-semibold text-gray-900 mb-2">Segmentos de atuação</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  Experiência prática em fintech, edtech, leilões, telecom e sistemas internos de gestão.
+                </p>
+              </div>
+              <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <h3 class="font-semibold text-gray-900 mb-2">Foco técnico</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  APIs de alta confiabilidade, pagamentos (PIX/cartão/boleto), processamento assíncrono e escalabilidade.
+                </p>
+              </div>
+              <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <h3 class="font-semibold text-gray-900 mb-2">Stack principal</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  Ruby on Rails, Vue.js, Laravel, PostgreSQL/MySQL, Redis, Sidekiq, Docker e AWS.
+                </p>
+              </div>
+              <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <h3 class="font-semibold text-gray-900 mb-2">Forma de trabalho</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  Colaboração próxima com produto e negócio, comunicação direta e entregas contínuas orientadas a resultado.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-outline">+7 anos em backend</span>
+              <span class="badge badge-outline">Pagamentos e fintech</span>
+              <span class="badge badge-outline">Integrações com APIs</span>
+              <span class="badge badge-outline">Arquitetura escalável</span>
+              <span class="badge badge-outline">Disponível para freelas</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Experiência Profissional -->
         <div class="card">
           <div class="card-header">
@@ -197,6 +246,70 @@
             </h2>
           </div>
           <div class="card-content space-y-6">
+            <div class="timeline-item">
+              <div class="timeline-dot bg-indigo-500"></div>
+              <div class="timeline-content">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 class="font-semibold text-lg">Fundador e Dev Backend (Projeto Autoral)</h3>
+                  <div class="flex items-center gap-1 text-sm text-gray-500">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Projeto contínuo
+                  </div>
+                </div>
+                <div class="flex items-center gap-1 text-gray-600 mb-3">
+                  <i data-lucide="building" class="w-4 h-4"></i>
+                  CatalystOps
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Desenvolvimento de plataforma para gestão de operações, com autenticação,
+                  controle de acesso, ordens de serviço, tarefas, equipes e projetos.
+                  Estruturação do backend para suportar escalabilidade, organização de processos
+                  e centralização de conhecimento operacional.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge-secondary">Ruby on Rails</span>
+                  <span class="badge badge-secondary">PostgreSQL</span>
+                  <span class="badge badge-secondary">Docker</span>
+                  <span class="badge badge-secondary">Devise</span>
+                  <span class="badge badge-secondary">Active Storage</span>
+                  <span class="badge badge-secondary">Autorização</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot bg-cyan-500"></div>
+              <div class="timeline-content">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 class="font-semibold text-lg">Desenvolvedor Full Stack (Projeto Autoral)</h3>
+                  <div class="flex items-center gap-1 text-sm text-gray-500">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Projeto contínuo
+                  </div>
+                </div>
+                <div class="flex items-center gap-1 text-gray-600 mb-3">
+                  <i data-lucide="building" class="w-4 h-4"></i>
+                  PrescSign
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Desenvolvi uma plataforma completa para prescrição e atestado digital, atuando no backend
+                  (Ruby on Rails) e no frontend (Vue.js). Implementei autenticação JWT (Devise), autorização
+                  multi-tenant (Pundit), emissão e versionamento de documentos, assinatura e validação de
+                  integridade, geração de PDF, trilha de auditoria e envio assíncrono (Sidekiq/Redis), aplicando
+                  boas práticas de segurança, idempotência, observabilidade e contratos REST.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge-secondary">Ruby on Rails</span>
+                  <span class="badge badge-secondary">Vue.js</span>
+                  <span class="badge badge-secondary">PostgreSQL</span>
+                  <span class="badge badge-secondary">Docker</span>
+                  <span class="badge badge-secondary">APIs REST</span>
+                  <span class="badge badge-secondary">Autenticação</span>
+                  <span class="badge badge-secondary">Arquitetura de software</span>
+                </div>
+              </div>
+            </div>
+
             <div class="timeline-item">
               <div class="timeline-dot bg-purple-500"></div>
               <div class="timeline-content">
@@ -427,6 +540,43 @@
 
             <div class="project-card">
               <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-lg">PrescSign</h3>
+                <div class="flex gap-2">
+                  <button class="btn btn-ghost btn-sm"
+                          data-action="project-link"
+                          data-project="PrescSign API"
+                          data-url="https://github.com/devbatista/prescsign.git">
+                    <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                    API
+                  </button>
+                  <button class="btn btn-ghost btn-sm"
+                          data-action="project-link"
+                          data-project="PrescSign Web"
+                          data-url="https://github.com/devbatista/prescsign_web.git">
+                    <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                    Web
+                  </button>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Plataforma full stack para prescrição e atestado digital, construída com Ruby on Rails e Vue.js.
+                O projeto contempla controle de acesso multi-tenant, fluxo seguro de emissão e versionamento de
+                documentos, assinatura com validação de integridade, geração de PDF e trilha de auditoria.
+                Também inclui processamento assíncrono com Sidekiq/Redis e APIs REST para integração entre os módulos.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-outline">Ruby on Rails</span>
+                <span class="badge badge-outline">Vue.js</span>
+                <span class="badge badge-outline">PostgreSQL</span>
+                <span class="badge badge-outline">Docker</span>
+                <span class="badge badge-outline">APIs REST</span>
+                <span class="badge badge-outline">Autenticação</span>
+                <span class="badge badge-outline">Projeto autoral</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="flex items-start justify-between mb-3">
                 <h3 class="font-semibold text-lg">DevBatista</h3>
                 <button class="btn btn-ghost btn-sm" 
                         data-action="project-link" 
@@ -613,7 +763,10 @@
         <!-- Contato -->
         <div class="card">
           <div class="card-header">
-            <h2 class="card-title">Entre em Contato</h2>
+            <h2 class="card-title">
+              <i data-lucide="messages-square" class="w-5 h-5"></i>
+              Entre em Contato
+            </h2>
           </div>
           <div class="card-content space-y-3">
             <button class="btn btn-outline w-full" data-action="email">
@@ -625,7 +778,9 @@
               Whatsapp
             </button>
             <button class="btn btn-primary w-full" data-action="linkedin">
-              <i data-lucide="linkedin" class="w-4 h-4 mr-2"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175A1.161 1.161 0 0 1 0 14.854zM4.943 13.5V6.169H2.542V13.5zM3.743 5.167c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248S2.4 3.21 2.4 3.92c0 .694.52 1.248 1.327 1.248zm9.757 8.333V9.359c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.752 0 7.331 0 7.331h2.4V9.405c0-.219.016-.438.08-.595.173-.438.567-.892 1.228-.892.867 0 1.214.673 1.214 1.658V13.5z"/>
+              </svg>
               LinkedIn
             </button>
           </div>
