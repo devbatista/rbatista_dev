@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Setup de tooltips
   setupTooltips();
 
+  // Scrollytelling e progresso de leitura
+  setupScrollytelling();
+  updateScrollProgress();
+
   // Tema escuro (opcional)
   setupThemeToggle();
 });
@@ -112,10 +116,49 @@ function observeElements() {
     rootMargin: '0px 0px -50px 0px'
   });
 
-  // Observar todos os cards
-  document.querySelectorAll('.card').forEach(card => {
-    observer.observe(card);
+  // Observar cards e blocos narrativos
+  document.querySelectorAll('.card, .story-step').forEach(element => {
+    observer.observe(element);
   });
+}
+
+function setupScrollytelling() {
+  const steps = Array.from(document.querySelectorAll('.story-step'));
+  const indexItems = Array.from(document.querySelectorAll('.story-index-item'));
+
+  if (!steps.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    const visibleEntry = entries
+      .filter(entry => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visibleEntry) return;
+
+    const activeIndex = steps.indexOf(visibleEntry.target);
+
+    steps.forEach((step, index) => {
+      step.classList.toggle('is-active', index === activeIndex);
+    });
+
+    indexItems.forEach((item, index) => {
+      item.classList.toggle('is-active', index === activeIndex);
+    });
+  }, {
+    threshold: [0.3, 0.45, 0.6, 0.75],
+    rootMargin: '-18% 0px -30% 0px'
+  });
+
+  steps.forEach(step => observer.observe(step));
+}
+
+function updateScrollProgress() {
+  const progress = document.querySelector('.scroll-progress');
+  if (!progress) return;
+
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const percentage = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  progress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
 }
 
 // Setup de tooltips simples
@@ -129,7 +172,10 @@ function setupTooltips() {
 }
 
 function showTooltip(e) {
-  const text = e.target.getAttribute('data-tooltip');
+  const trigger = e.target.closest('[data-tooltip]');
+  if (!trigger) return;
+
+  const text = trigger.getAttribute('data-tooltip');
   const tooltip = document.createElement('div');
   tooltip.className = 'tooltip';
   tooltip.textContent = text;
@@ -150,17 +196,18 @@ function showTooltip(e) {
   document.body.appendChild(tooltip);
 
   // Posicionar tooltip
-  const rect = e.target.getBoundingClientRect();
+  const rect = trigger.getBoundingClientRect();
   tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
   tooltip.style.top = rect.top - tooltip.offsetHeight - 5 + 'px';
 
-  e.target._tooltip = tooltip;
+  trigger._tooltip = tooltip;
 }
 
 function hideTooltip(e) {
-  if (e.target._tooltip) {
-    document.body.removeChild(e.target._tooltip);
-    delete e.target._tooltip;
+  const trigger = e.target.closest('[data-tooltip]');
+  if (trigger && trigger._tooltip) {
+    document.body.removeChild(trigger._tooltip);
+    delete trigger._tooltip;
   }
 }
 
@@ -228,21 +275,25 @@ function setupThemeToggle() {
 
 // Funcionalidades de scroll
 window.addEventListener('scroll', function () {
-  const header = document.querySelector('header');
+  const header = document.querySelector('.hero-nav');
+  if (!header) return;
+
   if (window.scrollY > 100) {
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
   }
+
+  updateScrollProgress();
 });
 
 // Adicionar classe CSS para header com scroll
 const style = document.createElement('style');
 style.textContent = `
-    header.scrolled {
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    .hero-nav.scrolled {
+        box-shadow: 0 16px 45px rgb(0 0 0 / 0.18);
         backdrop-filter: blur(8px);
-        background-color: rgb(255 255 255 / 0.95);
+        background-color: rgb(15 23 42 / 0.78);
     }
     
     .animate-in {

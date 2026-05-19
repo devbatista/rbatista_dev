@@ -120,34 +120,32 @@
   </script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+<body class="min-h-screen">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- Header -->
-  <header class="bg-white shadow-sm border-b">
-    <div class="max-w-6xl mx-auto px-4 py-6">
-      <div class="flex flex-col md:flex-row items-center gap-6">
-        <div
-          class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
-          RB
-        </div>
-        <div class="text-center md:text-left flex-1">
-          <h1 class="text-4xl font-bold text-gray-900 mb-2">Rafael Batista</h1>
-          <p class="text-xl text-gray-600 mb-4">Desenvolvedor Back-end</p>
-          <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-500">
-            <div class="flex items-center gap-1">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-              rafael@devbatista.com
-            </div>
-            <div class="flex items-center gap-1">
-              <i data-lucide="phone" class="w-4 h-4"></i>
-              (11) 98681-9042
-            </div>
-            <div class="flex items-center gap-1">
-              <i data-lucide="map-pin" class="w-4 h-4"></i>
-              Osasco, SP
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-3">
+  <header class="site-hero">
+    <nav class="hero-nav" aria-label="Navegação principal">
+      <a class="brand-mark" href="#topo" aria-label="Ir para o início">RB</a>
+      <div class="nav-links">
+        <a href="#story">História</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+
+    <div id="topo" class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">Currículo online | Backend Developer</p>
+        <h1>Rafael Batista</h1>
+        <p class="hero-role">Desenvolvedor Back-end com foco em Ruby on Rails, APIs e sistemas financeiros.</p>
+        <p class="hero-summary">
+          Perfil profissional, experiência, stack técnica e projetos reunidos em uma interface objetiva,
+          responsiva e pensada para leitura rápida.
+        </p>
+
+        <div class="hero-actions">
           <button class="btn btn-outline btn-sm" data-action="linkedin" data-tooltip="Ver perfil no LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175A1.161 1.161 0 0 1 0 14.854zM4.943 13.5V6.169H2.542V13.5zM3.743 5.167c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248S2.4 3.21 2.4 3.92c0 .694.52 1.248 1.327 1.248zm9.757 8.333V9.359c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.752 0 7.331 0 7.331h2.4V9.405c0-.219.016-.438.08-.595.173-.438.567-.892 1.228-.892.867 0 1.214.673 1.214 1.658V13.5z"/>
@@ -165,16 +163,122 @@
             Download CV
           </button>
         </div>
+
+        <div class="contact-strip" aria-label="Informações de contato">
+          <span><i data-lucide="mail" class="w-4 h-4"></i>rafael@devbatista.com</span>
+          <span><i data-lucide="phone" class="w-4 h-4"></i>(11) 98681-9042</span>
+          <span><i data-lucide="map-pin" class="w-4 h-4"></i>Osasco, SP</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Resumo profissional de Rafael Batista">
+        <img src="./assets/images/rafael-batista-profile.jpg" alt="Rafael Batista" class="profile-photo">
+        <div class="tech-status" aria-hidden="true">
+          <span></span>
+          <code>profile.status = "available"</code>
+        </div>
+        <div class="hero-stat-panel">
+          <div>
+            <strong>7+</strong>
+            <span>anos em backend</span>
+          </div>
+          <div>
+            <strong>PIX</strong>
+            <span>cartão, boleto e assinaturas</span>
+          </div>
+          <div>
+            <strong>Rails</strong>
+            <span>Laravel, Vue, AWS e Docker</span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section id="story" class="story-section" aria-labelledby="story-title">
+      <aside class="story-panel">
+        <p class="eyebrow">Resumo interativo</p>
+        <h2 id="story-title">Trajetória técnica em formato navegável.</h2>
+        <p>
+          Role para ver os pontos principais da minha atuação antes de entrar no currículo completo,
+          com experiência, projetos, habilidades e contato.
+        </p>
+        <div class="story-index" aria-hidden="true">
+          <span class="story-index-item is-active">Contexto</span>
+          <span class="story-index-item">Pagamentos</span>
+          <span class="story-index-item">Produtos próprios</span>
+          <span class="story-index-item">Forma de trabalho</span>
+        </div>
+      </aside>
+
+      <div class="story-steps">
+        <article class="story-step is-active" data-story-step="Contexto">
+          <span class="step-number">01</span>
+          <h3>Do código ao impacto operacional</h3>
+          <p>
+            Minha base é backend, mas o trabalho que mais gera resultado nasce quando código, processo e negócio
+            caminham juntos. Por isso, costumo aproximar domínio, fluxo de usuários e arquitetura antes de implementar.
+          </p>
+        </article>
+
+        <article class="story-step" data-story-step="Pagamentos">
+          <span class="step-number">02</span>
+          <h3>Experiência em fluxos financeiros</h3>
+          <p>
+            Atuei com pagamentos online, integrações PIX, cartão, boleto, assinaturas, comissionamento e processamento
+            assíncrono. Esse repertório ajuda a criar APIs previsíveis, observáveis e menos frágeis.
+          </p>
+        </article>
+
+        <article class="story-step" data-story-step="Produtos próprios">
+          <span class="step-number">03</span>
+          <h3>Projetos autorais como laboratório real</h3>
+          <p>
+            CatalystOps, PrescSign e DevBatista consolidam decisões de arquitetura, autenticação, autorização,
+            arquivos, auditoria, documentos e integrações em produtos que simulam problemas reais de operação.
+          </p>
+        </article>
+
+        <article class="story-step" data-story-step="Forma de trabalho">
+          <span class="step-number">04</span>
+          <h3>Entrega clara, incremental e sustentável</h3>
+          <p>
+            Valorizo comunicação direta, testes proporcionais ao risco, leitura cuidadosa do sistema existente e
+            evolução incremental para manter velocidade sem perder controle técnico.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="curriculum-snapshot" aria-label="Resumo do currículo">
+      <div class="snapshot-item">
+        <i data-lucide="server-cog" class="w-5 h-5"></i>
+        <span>Especialidade</span>
+        <strong>Backend & APIs</strong>
+      </div>
+      <div class="snapshot-item">
+        <i data-lucide="credit-card" class="w-5 h-5"></i>
+        <span>Domínio</span>
+        <strong>Pagamentos</strong>
+      </div>
+      <div class="snapshot-item">
+        <i data-lucide="database" class="w-5 h-5"></i>
+        <span>Stack</span>
+        <strong>Rails, SQL, Redis</strong>
+      </div>
+      <div class="snapshot-item">
+        <i data-lucide="briefcase-business" class="w-5 h-5"></i>
+        <span>Modelo</span>
+        <strong>CLT/Freela</strong>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 resume-grid">
       <!-- Coluna Principal -->
-      <div class="lg:col-span-2 space-y-8">
+      <div class="lg:col-span-2 space-y-8 resume-main">
         <!-- Sobre Mim -->
-        <div class="card">
+        <div class="card" id="sobre">
           <div class="card-header">
             <h2 class="card-title">
               <div class="w-2 h-8 bg-blue-500 rounded-full"></div>
@@ -193,7 +297,7 @@
         </div>
 
         <!-- Perfil Profissional -->
-        <div class="card">
+        <div class="card" id="perfil">
           <div class="card-header">
             <h2 class="card-title">
               <div class="w-2 h-8 bg-indigo-500 rounded-full"></div>
@@ -238,7 +342,7 @@
         </div>
 
         <!-- Experiência Profissional -->
-        <div class="card">
+        <div class="card" id="experiencia">
           <div class="card-header">
             <h2 class="card-title">
               <div class="w-2 h-8 bg-green-500 rounded-full"></div>
@@ -500,7 +604,7 @@
         </div>
 
         <!-- Projetos -->
-        <div class="card">
+        <div class="card" id="projetos">
           <div class="card-header">
             <h2 class="card-title">
               <div class="w-2 h-8 bg-purple-500 rounded-full"></div>
@@ -656,7 +760,7 @@
       </div>
 
       <!-- Sidebar -->
-      <div class="space-y-6">
+      <div class="space-y-6 resume-sidebar">
         <!-- Habilidades -->
         <div class="card">
           <div class="card-header">
@@ -761,7 +865,7 @@
         </div>
 
         <!-- Contato -->
-        <div class="card">
+        <div class="card" id="contato">
           <div class="card-header">
             <h2 class="card-title">
               <i data-lucide="messages-square" class="w-5 h-5"></i>
