@@ -172,6 +172,7 @@
           <span><i data-lucide="phone" class="w-4 h-4"></i>(11) 98681-9042</span>
           <span><i data-lucide="map-pin" class="w-4 h-4"></i>São Paulo, SP</span>
         </div>
+
       </div>
 
       <div class="hero-visual" aria-label="Resumo profissional de Rafael Batista">
@@ -275,6 +276,42 @@
         <i data-lucide="bot" class="w-5 h-5"></i>
         <span>IA aplicada</span>
         <strong>APIs, agentes e automações</strong>
+      </div>
+    </section>
+
+    <section class="backend-section" aria-labelledby="backend-title">
+      <div class="backend-section-copy">
+        <p class="eyebrow">Backend em produção</p>
+        <h2 id="backend-title">APIs, filas, dados e automações trabalhando em conjunto.</h2>
+        <p>
+          Minha atuação backend passa por desenho de contratos, integrações externas,
+          processamento assíncrono, persistência, observabilidade e automações com IA
+          quando elas ajudam a reduzir trabalho manual ou melhorar fluxos operacionais.
+        </p>
+        <div class="backend-flow" aria-label="Stack backend principal">
+          <span><code>API</code> Rails</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <span><code>JOB</code> Sidekiq</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <span><code>DB</code> SQL/Redis</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <span><code>IA</code> Automação</span>
+        </div>
+      </div>
+
+      <div class="backend-console" aria-label="Painel backend">
+        <div class="console-topbar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <code>production.rb</code>
+        </div>
+        <div class="console-body">
+          <p><span>GET</span> /api/v1/payments <strong>200 OK</strong></p>
+          <p><span>POST</span> /webhooks/pix <strong>202 ACCEPTED</strong></p>
+          <p><span>JOB</span> BillingWorker.perform_async <strong>queued</strong></p>
+          <p><span>AI</span> classify_ticket(payload) <strong>done</strong></p>
+        </div>
       </div>
     </section>
 

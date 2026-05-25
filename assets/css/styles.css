@@ -30,8 +30,11 @@
 
 body {
   background:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
     linear-gradient(180deg, rgba(248, 250, 252, 0.86), rgba(255, 255, 255, 0.96) 38%),
     url("../images/rafael-batista-cover.jpg") center top / cover fixed;
+  background-size: 32px 32px, 32px 32px, auto, cover;
   color: var(--ink);
 }
 
@@ -50,8 +53,11 @@ body {
   min-height: 92vh;
   padding: 1rem;
   background:
-    linear-gradient(115deg, rgba(10, 16, 30, 0.92) 0%, rgba(18, 30, 52, 0.86) 48%, rgba(15, 118, 110, 0.68) 100%),
+    linear-gradient(rgba(125, 211, 252, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.06) 1px, transparent 1px),
+    linear-gradient(115deg, rgba(2, 6, 23, 0.94) 0%, rgba(15, 23, 42, 0.91) 48%, rgba(15, 118, 110, 0.72) 100%),
     url("../images/rafael-batista-cover.jpg") center / cover;
+  background-size: 34px 34px, 34px 34px, auto, cover;
   color: white;
 }
 
@@ -191,6 +197,36 @@ body {
   font-size: 0.875rem;
 }
 
+.backend-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  color: rgba(226, 232, 240, 0.82);
+}
+
+.backend-flow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(2, 6, 23, 0.46);
+  font-size: 0.82rem;
+}
+
+.backend-flow code {
+  color: #67e8f9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 800;
+}
+
+.backend-flow svg {
+  color: rgba(125, 211, 252, 0.56);
+}
+
 .hero-visual {
   position: relative;
   display: grid;
@@ -234,7 +270,79 @@ body {
 }
 
 .tech-status code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 0.78rem;
+}
+
+.backend-console {
+  width: min(100%, 24rem);
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  border-radius: 0.75rem;
+  background: rgba(2, 6, 23, 0.88);
+  color: #dbeafe;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.36);
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+}
+
+.console-topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.96);
+}
+
+.console-topbar span {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: #f87171;
+}
+
+.console-topbar span:nth-child(2) {
+  background: #facc15;
+}
+
+.console-topbar span:nth-child(3) {
+  background: #22c55e;
+}
+
+.console-topbar code,
+.console-body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.console-topbar code {
+  margin-left: auto;
+  color: rgba(226, 232, 240, 0.72);
+  font-size: 0.76rem;
+}
+
+.console-body {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0.9rem;
+  font-size: 0.77rem;
+}
+
+.console-body p {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.console-body span {
+  color: #67e8f9;
+  font-weight: 900;
+}
+
+.console-body strong {
+  color: #86efac;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .hero-stat-panel {
@@ -248,6 +356,43 @@ body {
   background: rgba(255, 255, 255, 0.92);
   color: rgb(15, 23, 42);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.26);
+}
+
+.backend-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(19rem, 0.85fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 0 0 2rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(rgba(125, 211, 252, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(17, 94, 89, 0.92));
+  background-size: 28px 28px, 28px 28px, auto;
+  color: white;
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.14);
+}
+
+.backend-section-copy h2 {
+  margin-top: 0.55rem;
+  max-width: 42rem;
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+  line-height: 1.12;
+  font-weight: 900;
+}
+
+.backend-section-copy p:not(.eyebrow) {
+  max-width: 42rem;
+  margin-top: 0.85rem;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.75;
+}
+
+.backend-section .backend-console {
+  justify-self: end;
 }
 
 .hero-stat-panel div {
@@ -740,18 +885,25 @@ html {
   }
 
   .hero-actions,
-  .contact-strip {
+  .contact-strip,
+  .backend-flow {
     flex-direction: column;
     align-items: stretch;
   }
 
   .hero-actions .btn,
-  .contact-strip span {
+  .contact-strip span,
+  .backend-flow span {
     width: 100%;
     justify-content: center;
   }
 
+  .backend-flow svg {
+    display: none;
+  }
+
   .profile-photo,
+  .backend-console,
   .hero-stat-panel {
     justify-self: center;
   }
@@ -792,6 +944,15 @@ html {
 
   .snapshot-item {
     min-height: auto;
+  }
+
+  .backend-section {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .backend-section .backend-console {
+    justify-self: center;
   }
 
   .resume-sidebar {
